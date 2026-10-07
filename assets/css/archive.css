@@ -1,0 +1,108 @@
+
+/* Archive-only adjustments layered on top of the original index.css.
+   The 2014 theme is fixed-width desktop; these rules keep it usable on a
+   phone and style the pieces the live forum never had. */
+#wrapper { max-width: 1200px; margin: 0 auto; }
+.archive-banner {
+  background: #2b2b2b; border: 1px solid #bd9851; color: #e8dcc0;
+  padding: 7px 12px; margin: 6px 0; font-size: 0.85em; border-radius: 3px;
+}
+.archive-banner strong { color: #FCDB72; }
+.archive-about { padding: 12px 14px; line-height: 1.5; }
+.archive-about p { margin: 0 0 .7em; }
+
+/* Dead external images: show the gap honestly instead of a broken icon. */
+.img-gone {
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: 54px; padding: 8px 12px; margin: 3px 0;
+  border: 1px dashed #8a8a8a; border-radius: 3px;
+  background: rgba(0,0,0,.18); color: #b9b9b9;
+  font-size: .8em; line-height: 1.25; vertical-align: middle;
+}
+.img-gone-icon { font-size: 1.3em; opacity: .75; }
+.img-gone-txt small { opacity: .7; }
+
+.bbc_img { max-width: 100%; height: auto; }
+.bbc_video { position: relative; width: 100%; max-width: 640px;
+  aspect-ratio: 16/9; margin: 6px 0; }
+.bbc_video iframe { position: absolute; inset: 0; width: 100%;
+  height: 100%; border: 0; }
+.bbc_u { text-decoration: underline; }
+.bbc_move { font-style: italic; }
+.bbc_shadow { text-shadow: 1px 1px 2px rgba(0,0,0,.6); }
+.bbc_code { background: rgba(0,0,0,.25); border: 1px solid #555;
+  padding: 8px; overflow: auto; }
+.bbc_code pre { margin: 0; white-space: pre-wrap; word-break: break-word; }
+.bbc_table { border-collapse: collapse; }
+.bbc_table td, .bbc_table th { border: 1px solid #666; padding: 3px 6px; }
+.bbc_list { margin: .4em 0 .4em 1.6em; }
+.bbc_member { font-weight: bold; }
+.bbc_email { font-style: italic; }
+img.smiley { vertical-align: middle; }
+.post .inner { word-wrap: break-word; overflow-wrap: break-word; }
+.post .inner a { word-break: break-all; }
+
+.attachments { margin: 8px 0 2px; padding: 8px;
+  border-top: 1px solid #555; font-size: .85em; }
+.attach-img { display: inline-block; margin: 6px 8px 0 0;
+  vertical-align: top; max-width: 280px; }
+.attach-img img { max-width: 280px; height: auto; display: block;
+  border: 1px solid #555; }
+.attach-cap { font-size: .9em; opacity: .8; margin-top: 2px; }
+.attach-gone { opacity: .6; font-style: italic; }
+.attach-inline { font-weight: bold; }
+.post_meta .modified { opacity: .7; font-size: .9em; }
+.sticky-flag, .lock-flag { font-size: .85em; opacity: .7; }
+
+form.gsearch { margin: 4px 0 8px; display: flex; gap: 6px;
+  flex-wrap: wrap; align-items: center; justify-content: center; }
+form.gsearch label { font-size: .85em; opacity: .8; }
+form.gsearch input[type=search] { flex: 1 1 260px; max-width: 420px;
+  padding: 5px 8px; background: #1d1d1d; color: #e8dcc0;
+  border: 1px solid #5a5a5a; border-radius: 3px; }
+form.gsearch button { padding: 5px 14px; cursor: pointer;
+  background: #3a3a3a; color: #FCDB72; border: 1px solid #bd9851;
+  border-radius: 3px; }
+form.gsearch button:hover { background: #4a4a4a; }
+.gsearch-help { font-size: .78em; opacity: .7; text-align: center;
+  margin: 0 0 10px; line-height: 1.5; }
+.gsearch-help code { background: rgba(0,0,0,.3); padding: 1px 4px;
+  border-radius: 2px; }
+
+/* Private admin build only. */
+.privwarn { background: #4a1414; border-color: #c0392b; color: #f3d6d2; }
+.privwarn strong { color: #ff8a7a; }
+.archive-about .warn { color: #e8a0a0; }
+table.ficha { width: 100%; border-collapse: collapse; }
+table.ficha th { text-align: left; width: 190px; padding: 5px 10px;
+  vertical-align: top; opacity: .75; font-weight: normal;
+  border-bottom: 1px solid #444; }
+table.ficha td { padding: 5px 10px; border-bottom: 1px solid #444;
+  word-break: break-word; }
+.pm-meta { padding: 8px 12px; font-size: .85em; opacity: .85; }
+
+/* Phone layout: the original theme has no mobile rules at all. */
+@media (max-width: 760px) {
+  body { font-size: 15px; }
+  h1.forumtitle img { max-width: 100%; height: auto; }
+  .logo_izq, .logo_der, .logo_izq_estira, .logo_der_estira { display: none; }
+  #messageindex table.table_grid thead { display: none; }
+  #messageindex table.table_grid, #messageindex table.table_grid tbody,
+  #messageindex table.table_grid tr, #messageindex table.table_grid td {
+    display: block; width: auto;
+  }
+  #messageindex table.table_grid tr { border-bottom: 1px solid #555;
+    padding: 6px 4px; }
+  #messageindex td.icon1, #messageindex td.icon2 { display: none; }
+  #messageindex td.starter { display: none; }
+  #messageindex td.replies, #messageindex td.views {
+    display: inline-block; opacity: .75; font-size: .85em; margin-right: 10px;
+  }
+  .table_list td.icon, .table_list td.stats { display: none; }
+  .post_wrapper .poster { float: none; width: auto;
+    border-bottom: 1px solid #555; margin-bottom: 6px; }
+  .post_wrapper .poster h4 { display: inline; margin-right: 8px; }
+  .post_wrapper .poster ul { display: inline; }
+  .post_wrapper .poster ul li { display: inline; margin-right: 8px; }
+  .post_wrapper .postarea { margin-left: 0; width: auto; }
+}
